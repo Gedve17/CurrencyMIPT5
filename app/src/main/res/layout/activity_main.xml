@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_get_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnGetDataClick"
+        android:text="Get data!"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterEditText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ListView
+        android:id="@+id/lv_items"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_status"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nothing is happening :/"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_filter_data" />
+
+    <EditText
+        android:id="@+id/filterEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter currency code"
+        android:inputType="text"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw_use_async_task" />
+
+    <Button
+        android:id="@+id/btn_filter_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:onClick="onBtnFilterData"
+        android:text="Filter data!"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_get_data"
+        app:layout_constraintTop_toBottomOf="@+id/filterEditText" />
+
+    <Switch
+        android:id="@+id/sw_use_async_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Use Async task"
+        app:layout_constraintStart_toEndOf="@+id/btn_get_data"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
